@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRM Fashion | Style That Speaks for You</title>
+  <meta name="description" content="DRM Fashion – Premium men's clothing from Bangladesh. Blazers, Panjabis, Coti outfits & more. Founded 2022.">
+  <meta name="keywords" content="DRM Fashion, men's blazer Bangladesh, panjabi, coti, men's fashion Dhaka">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --bg-card: #ffffff;
+      --text: #171717;
+      --text-muted: #5c5c5c;
+      --gold: #9c7945;
+      --gold-light: #c4a574;
+      --navy: #1a2332;
+      --border: #e8e4de;
+      --accent: #8b6914;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo img {
+      height: 42px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--navy);
+    }
+
+    .logo-text span {
+      color: var(--gold);
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: block;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f5efe6, #ebe4d6);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e0d6c4;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #0f1620;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(26, 35, 50, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Collections */
+    .collections {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 4rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      border-color: #d9cfc0;
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.25rem;
+      background: linear-gradient(145deg, #f8f4ec, #efe8d9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* About / Info strip */
+    .info {
+      background: var(--navy);
+      color: #e8e4de;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .info-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .info p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 620px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .info .btn-primary {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .info .btn-primary:hover {
+      background: var(--gold-light);
+      color: var(--navy);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f141c;
+      color: #a8a29e;
+      padding: 2.5rem 1.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      font-weight: 500;
+    }
+
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+      }
+      .hero {
+        padding: 3rem 1.25rem 2rem;
+      }
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="https://www.drmfashion.com/" class="logo" target="_blank" rel="noopener">
+        <img src="https://www.drmfashion.com/_next/image?url=%2Fuploads%2Fdrm-fashion-logo-1789032252364-483464835.png&w=384&q=75" alt="DRM Fashion Logo">
+        <div class="logo-text">
+          DRM
+          <span>Fashion</span>
+        </div>
+      </a>
+      <nav>
+        <a href="https://www.drmfashion.com/" target="_blank" rel="noopener">Shop</a>
+        <a href="https://www.facebook.com/drmfashionlimited" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Est. 2022 · Bangladesh</div>
+    <h1>Style That <em>Speaks</em> for You</h1>
+    <p>Premium men's clothing crafted for everyday confidence and special occasions. Blazers, Panjabis, Coti outfits & more — designed in Dhaka.</p>
+    <div class="cta-group">
+      <a href="https://www.drmfashion.com/" class="btn btn-primary" target="_blank" rel="noopener">
+        Visit Official Website →
+      </a>
+      <a href="https://www.facebook.com/drmfashionlimited" class="btn btn-outline" target="_blank" rel="noopener">
+        Follow on Facebook
+      </a>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="collections">
+    <h2 class="section-title">Our Collections</h2>
+    <p class="section-sub">Elegant pieces for the modern gentleman</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🕴️</div>
+        <h3>Men's Blazers</h3>
+        <p>Slim-fit premium blazers in elegant colors & patterns — perfect for office, weddings & events.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👘</div>
+        <h3>Men's Panjabis</h3>
+        <p>Traditional yet modern Panjabis with refined detailing for festive and formal occasions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👔</div>
+        <h3>Traditional Coti Outfits</h3>
+        <p>Complete coordinated looks featuring waistcoats, blazers and formal pants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About strip -->
+  <section class="info">
+    <div class="info-inner">
+      <h2>DRM Fashion</h2>
+      <p>A men's clothing brand from Bangladesh founded in 2022. We believe great style should be accessible — premium fabrics, perfect fit, and designs that elevate every occasion.</p>
+      <a href="https://www.drmfashion.com/" class="btn btn-primary" target="_blank" rel="noopener">
+        Explore Collections
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.drmfashion.com/" target="_blank" rel="noopener">Official Website</a>
+      <a href="https://www.facebook.com/drmfashionlimited" target="_blank" rel="noopener">Facebook Page</a>
+    </div>
+    <p class="copyright">
+      © 2022–2026 DRM Fashion. All rights reserved.<br>
+      This is an official backlink/brand presence page.
+    </p>
+  </footer>
+
+</body>
+</html>
